@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	git 'https://github.com/sonam-niit/SPBootDockerJenkins.git'
+            	git branch: 'main', url: 'https://github.com/sonam-niit/SPBootDockerJenkins.git'
             	sh './mvnw compile'
                 echo 'Maven Buid Successful'
             }
