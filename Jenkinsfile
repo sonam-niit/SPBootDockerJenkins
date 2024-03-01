@@ -5,19 +5,19 @@ pipeline {
         stage('Build') {
             steps {
             	git branch: 'main', url: 'https://github.com/sonam-niit/SPBootDockerJenkins.git'
-            	sh './mvnw compile'
+            	sh 'mvn clean'
                 echo 'Maven Buid Successful'
             }
         }
         stage('Test') {
             steps {
-            	sh './mvnw test'
+            	sh 'mvn test'
                 echo 'TestCases Executed Successfully'
             }
         }
         stage('Package') {
             steps {
-            	sh './mvnw package'
+            	sh 'mvn package'
                 echo 'Application Deployed Successfully'
             }
         }
