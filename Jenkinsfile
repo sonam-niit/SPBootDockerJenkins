@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	checkout scm
             	sh './mvnw compile'
                 echo 'Maven Buid Successful'
             }
