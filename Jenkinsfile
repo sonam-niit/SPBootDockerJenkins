@@ -9,12 +9,6 @@ pipeline {
                 echo 'Maven Buid Successful'
             }
         }
-        stage('Test') {
-            steps {
-            	sh 'mvn test'
-                echo 'TestCases Executed Successfully'
-            }
-        }
         stage('Package') {
             steps {
             	sh 'mvn package'
